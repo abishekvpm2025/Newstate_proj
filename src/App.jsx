@@ -10,10 +10,8 @@ import Questionpage from "./Components/Questionpage.jsx";
 const App = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center text-white"
-      style={{
-        backgroundImage: "url('https://picsum.photos/1600/900?blur=2')",
-      }}
+      className="min-h-screen bg-cover bg-center text-white bg-blue-700"
+      
     >
       {/* Navbar */}
       <nav className="flex justify-center gap-6 bg-black/50 py-4">

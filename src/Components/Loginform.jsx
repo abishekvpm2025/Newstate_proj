@@ -15,12 +15,12 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 min-h-screen bg-gray-100 justify-center">
+    <div className="flex flex-col items-center gap-4   justify-center">
       <h1 className="text-2xl font-bold">Login Form</h1>
 
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-3 w-72 bg-white p-6 rounded-xl shadow-lg"
+        className="flex flex-col gap-3 w-72  bg-white p-6 rounded-xl shadow-lg"
       >
         <h3 className="text-black font-semibold">Name</h3>
         <input
@@ -29,7 +29,7 @@ const LoginForm = () => {
           placeholder="Name"
           onChange={handleChange}
           className="border border-gray-400 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-l font-bold"
-          required
+          
         />
 
         <h3 className="text-black font-semibold">Email</h3>
@@ -39,7 +39,7 @@ const LoginForm = () => {
           placeholder="Email"
           onChange={handleChange}
           className="border border-gray-400 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-l font-bold text-black"
-          required
+          
         />
 
         <h3 className="text-black font-semibold" >Phone Number</h3>
@@ -49,7 +49,7 @@ const LoginForm = () => {
           placeholder="Phone Number"
           onChange={handleChange}
           className="border border-gray-400 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500  font-bold text-black"
-          required
+        
         />
 
         {/* Submit button */}

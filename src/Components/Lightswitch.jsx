@@ -1,10 +1,10 @@
-import React, { useState } from "react";  // ✅ Import useState
+import React, { useState } from "react"; 
 
 const LightSwitch = () => {
   const [on, setOn] = useState(false);
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="flex flex-col items-center gap-5">
       <h1 className="text-2xl font-bold">Light Switch</h1>
 
       {/* Light bulb circle */}
