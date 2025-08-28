@@ -1,11 +1,13 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
-// ✅ all components from components folder
+
 import Counter from "./Components/Counter.jsx";
 import Lightswitch from "./Components/Lightswitch.jsx";
 import Loginform from "./Components/Loginform.jsx";
 import Questionpage from "./Components/Questionpage.jsx";
+import Useeffect from "./Components/Useeffect.jsx";
+import Useproduct from "./Components/Useproduct.jsx";
 
 const App = () => {
   return (
@@ -27,6 +29,13 @@ const App = () => {
         <Link to="/qa" className="hover:text-yellow-300 font-bold">
           Q&A
         </Link>
+        <Link to="useeff" className="hover:text-yellow-300 font-bold" >
+        Use Effect
+        </Link>
+        <Link to="product" className="hover:text-yellow-300 font-bold" >
+        Products
+        </Link>
+        
       </nav>
 
       {/* Pages */}
@@ -36,6 +45,8 @@ const App = () => {
           <Route path="/light" element={<Lightswitch />} />
           <Route path="/form" element={<Loginform />} />
           <Route path="/qa" element={<Questionpage />} />
+          <Route path="useeff" element={< Useeffect />}/>
+           <Route path="product" element={< Useproduct />}/>
         </Routes>
       </div>
     </div>
