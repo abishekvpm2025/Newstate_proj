@@ -1,0 +1,5 @@
+fetch api
+map syntex
+use effect
+use state=>object-array-arr of object -true or false-number-string -desturing panni valu va vella yeduthu irukkanum
+form handling-two method => 1.submit 2.value yedukurathu function

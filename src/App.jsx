@@ -8,6 +8,7 @@ import Loginform from "./Components/Loginform.jsx";
 import Questionpage from "./Components/Questionpage.jsx";
 import Useeffect from "./Components/Useeffect.jsx";
 import Useproduct from "./Components/Useproduct.jsx";
+import Empname from "./Components/Empname.jsx";
 
 const App = () => {
   return (
@@ -35,6 +36,9 @@ const App = () => {
         <Link to="product" className="hover:text-yellow-300 font-bold" >
         Products
         </Link>
+        <Link to="empdata" className="hover:text-yellow-300 font-bold" >
+        Users
+        </Link>
         
       </nav>
 
@@ -47,6 +51,7 @@ const App = () => {
           <Route path="/qa" element={<Questionpage />} />
           <Route path="useeff" element={< Useeffect />}/>
            <Route path="product" element={< Useproduct />}/>
+           <Route path="empdata" element={< Empname />}/>
         </Routes>
       </div>
     </div>
