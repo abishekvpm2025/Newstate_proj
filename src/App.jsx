@@ -9,6 +9,7 @@ import Questionpage from "./Components/Questionpage.jsx";
 import Useeffect from "./Components/Useeffect.jsx";
 import Useproduct from "./Components/Useproduct.jsx";
 import Empname from "./Components/Empname.jsx";
+import Form from "./Components/Form.jsx";
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
         <Link to="/light" className="hover:text-yellow-300 font-bold">
           Light
         </Link>
-        <Link to="/form" className="hover:text-yellow-300 font-bold">
+        <Link to="/formdata" className="hover:text-yellow-300 font-bold">
           Login
         </Link>
         <Link to="/qa" className="hover:text-yellow-300 font-bold">
@@ -39,6 +40,10 @@ const App = () => {
         <Link to="empdata" className="hover:text-yellow-300 font-bold" >
         Users
         </Link>
+
+        <Link to="form" className="hover:text-yellow-300 font-bold" >
+        form
+        </Link>
         
       </nav>
 
@@ -47,11 +52,12 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Counter />} />
           <Route path="/light" element={<Lightswitch />} />
-          <Route path="/form" element={<Loginform />} />
+          <Route path="/formdata" element={<Loginform />} />
           <Route path="/qa" element={<Questionpage />} />
           <Route path="useeff" element={< Useeffect />}/>
            <Route path="product" element={< Useproduct />}/>
            <Route path="empdata" element={< Empname />}/>
+           <Route path="form" element={< Form />}/>
         </Routes>
       </div>
     </div>
