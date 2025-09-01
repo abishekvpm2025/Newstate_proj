@@ -10,6 +10,7 @@ import Useeffect from "./Components/Useeffect.jsx";
 import Useproduct from "./Components/Useproduct.jsx";
 import Empname from "./Components/Empname.jsx";
 import Form from "./Components/Form.jsx";
+import StateDemo from "./Components/StateDemo.jsx";
 
 const App = () => {
   return (
@@ -44,6 +45,9 @@ const App = () => {
         <Link to="form" className="hover:text-yellow-300 font-bold" >
         form
         </Link>
+        <Link to="demo" className="hover:text-yellow-300 font-bold" >
+        Demo
+        </Link>
         
       </nav>
 
@@ -58,6 +62,7 @@ const App = () => {
            <Route path="product" element={< Useproduct />}/>
            <Route path="empdata" element={< Empname />}/>
            <Route path="form" element={< Form />}/>
+           <Route path="demo" element={< StateDemo />}/>
         </Routes>
       </div>
     </div>
