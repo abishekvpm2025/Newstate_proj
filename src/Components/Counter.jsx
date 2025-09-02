@@ -3,6 +3,9 @@ import React, { useState } from "react";
 // ---- Page 1: Counter ----
 const Counter = () => {
   const [count, setCount] = useState(0);
+
+  console.log("component render");
+  
   return (
     <div className="flex flex-col items-center gap-4">
       <h1 className="text-2xl font-bold">Counter Page</h1>

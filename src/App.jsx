@@ -11,6 +11,7 @@ import Useproduct from "./Components/Useproduct.jsx";
 import Empname from "./Components/Empname.jsx";
 import Form from "./Components/Form.jsx";
 import StateDemo from "./Components/StateDemo.jsx";
+import Useref from "./Components/Useref.jsx";
 
 const App = () => {
   return (
@@ -48,6 +49,11 @@ const App = () => {
         <Link to="demo" className="hover:text-yellow-300 font-bold" >
         Demo
         </Link>
+        <Link to="useref" className="hover:text-yellow-300 font-bold" >
+        useref
+        </Link>
+
+
         
       </nav>
 
@@ -63,6 +69,7 @@ const App = () => {
            <Route path="empdata" element={< Empname />}/>
            <Route path="form" element={< Form />}/>
            <Route path="demo" element={< StateDemo />}/>
+           <Route path="useref" element={< Useref />}/>
         </Routes>
       </div>
     </div>
