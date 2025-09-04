@@ -12,16 +12,22 @@ import Empname from "./Components/Empname.jsx";
 import Form from "./Components/Form.jsx";
 import StateDemo from "./Components/StateDemo.jsx";
 import Useref from "./Components/Useref.jsx";
+import Mycontext from "./Components/Context/Mycontext.jsx";
+import Myprovider from "./Components/Context/Myprovider.jsx";
+import Loginpage from "./Components/Context/Loginpage.jsx";
+import Register from "./Components/Context/Register.jsx";
+import Dashboard from "./Components/Context/Dashboard.jsx";
+
 
 const App = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center text-white bg-blue-700"
+      className="min-h-screen bg-cover bg-center text-white bg-blue-500"
       
     >
       {/* Navbar */}
       <nav className="flex justify-center gap-6 bg-black/50 py-4">
-        <Link to="/" className="hover:text-yellow-300 font-bold">
+        {/* <Link to="/" className="hover:text-yellow-300 font-bold">
           Counter
         </Link>
         <Link to="/light" className="hover:text-yellow-300 font-bold">
@@ -51,7 +57,18 @@ const App = () => {
         </Link>
         <Link to="useref" className="hover:text-yellow-300 font-bold" >
         useref
+        </Link> */}
+        <Link to="register" className="hover:text-yellow-300 font-bold" >
+        register
         </Link>
+        <Link to="dashboard" className="hover:text-yellow-300 font-bold" >
+        dashboard
+        </Link>
+        <Link to="/" className="hover:text-yellow-300 font-bold" >
+        Login        </Link>
+
+       
+       
 
 
         
@@ -59,8 +76,10 @@ const App = () => {
 
       {/* Pages */}
       <div className="flex justify-center items-center py-10">
+          <Myprovider>
+
         <Routes>
-          <Route path="/" element={<Counter />} />
+          {/* <Route path="/" element={ <Counter /> } />
           <Route path="/light" element={<Lightswitch />} />
           <Route path="/formdata" element={<Loginform />} />
           <Route path="/qa" element={<Questionpage />} />
@@ -69,8 +88,17 @@ const App = () => {
            <Route path="empdata" element={< Empname />}/>
            <Route path="form" element={< Form />}/>
            <Route path="demo" element={< StateDemo />}/>
-           <Route path="useref" element={< Useref />}/>
+           <Route path="useref" element={< Useref />}/> */}
+           
+            <Route path="/" element={<Loginpage />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+           
+          
+
+
         </Routes>
+        </Myprovider>
       </div>
     </div>
   );

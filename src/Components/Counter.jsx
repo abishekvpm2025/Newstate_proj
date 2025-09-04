@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { useContext } from "react";
+import Mycontext from "./Context/Mycontext";
 
 // ---- Page 1: Counter ----
 const Counter = () => {
   const [count, setCount] = useState(0);
+
+  const {data,Setdata} = useContext(Mycontext)
 
   console.log("component render");
   
@@ -16,6 +20,8 @@ const Counter = () => {
       >
         COUNT
       </button>
+      <h1>{data}</h1>
+      <button onClick={()=>{Setdata("this is updated context")}}> context button</button>
     </div>
   );
 };

@@ -1,7 +1,11 @@
 import React, { useState } from "react"; 
+import { useContext } from "react";
+import Mycontext from "./Context/Mycontext";
 
 const LightSwitch = () => {
   const [on, setOn] = useState(false);
+
+  const {data,Setdata}=useContext(Mycontext)
 
   return (
     <div className="flex flex-col items-center gap-5">
@@ -23,6 +27,8 @@ const LightSwitch = () => {
       >
         {on ? "Turn OFF" : "Turn ON"}
       </button>
+      <h1>{data}</h1>
+      <button onClick={()=>{Setdata("this is updated context")}}> context button</button>
     </div>
   );
 };
