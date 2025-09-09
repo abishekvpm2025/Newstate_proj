@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 
 const Useref = () => {
   console.log("component render");
@@ -9,7 +9,7 @@ const Useref = () => {
 
   const buttonref = useRef(null);
 
-  const butt = useRef(null);
+const [butt,Setbutt]=useState("bg-black")
 
   const handlechange = () => {
     console.log("yesref render");
@@ -28,13 +28,13 @@ const Useref = () => {
   };
 
   const changecolor = () => {
-    // const inputvalue = buttonref.current.value;
 
-    if (buttonref.current.value.toLowerCase() === "off") {
-      butt.current.style.backgroundColor = "green";
-    } else {
-      butt.current.style.backgroundColor = "";
-    }
+    const inputvalue = buttonref.current.value.toLowerCase()
+    Setbutt(inputvalue === "off" ? "bg-green-500":"bg-black")
+
+
+
+    
   };
 
   return (
@@ -58,7 +58,7 @@ const Useref = () => {
           onChange={changecolor}
           className=" border-2 bg-gray-300 text-black p-2 "
         />
-        <button className="bg-gray-900 h-20 w-20 rounded-4xl border-3" ref={butt}>submit </button>
+        <button className={`h-20 w-20 rounded-4xl border-3 ${butt}`} >submit </button>
       </div>
       </div>
     </>

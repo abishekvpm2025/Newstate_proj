@@ -17,6 +17,8 @@ import Myprovider from "./Components/Context/Myprovider.jsx";
 import Loginpage from "./Components/Context/Loginpage.jsx";
 import Register from "./Components/Context/Register.jsx";
 import Dashboard from "./Components/Context/Dashboard.jsx";
+import Usemimo from "./Components/Usemimo.jsx";
+import AppUseCallback from "./Components/Usemimo.jsx";
 
 
 const App = () => {
@@ -25,9 +27,9 @@ const App = () => {
       className="min-h-screen bg-cover bg-center text-white bg-blue-500"
       
     >
-      {/* Navbar */}
+      {/* { Navbar } */}
       <nav className="flex justify-center gap-6 bg-black/50 py-4">
-        {/* <Link to="/" className="hover:text-yellow-300 font-bold">
+         <Link to="/" className="hover:text-yellow-300 font-bold">
           Counter
         </Link>
         <Link to="/light" className="hover:text-yellow-300 font-bold">
@@ -57,15 +59,18 @@ const App = () => {
         </Link>
         <Link to="useref" className="hover:text-yellow-300 font-bold" >
         useref
-        </Link> */}
-        <Link to="register" className="hover:text-yellow-300 font-bold" >
+        </Link>
+        <Link to="memo" className="hover:text-yellow-300 font-bold" >
+        mimo
+        </Link> 
+        {/* <Link to="register" className="hover:text-yellow-300 font-bold" >
         register
         </Link>
         <Link to="dashboard" className="hover:text-yellow-300 font-bold" >
         dashboard
         </Link>
         <Link to="/" className="hover:text-yellow-300 font-bold" >
-        Login        </Link>
+        Login        </Link> */}
 
        
        
@@ -79,7 +84,7 @@ const App = () => {
           <Myprovider>
 
         <Routes>
-          {/* <Route path="/" element={ <Counter /> } />
+          <Route path="/" element={ <Counter /> } />
           <Route path="/light" element={<Lightswitch />} />
           <Route path="/formdata" element={<Loginform />} />
           <Route path="/qa" element={<Questionpage />} />
@@ -88,11 +93,13 @@ const App = () => {
            <Route path="empdata" element={< Empname />}/>
            <Route path="form" element={< Form />}/>
            <Route path="demo" element={< StateDemo />}/>
-           <Route path="useref" element={< Useref />}/> */}
+           <Route path="useref" element={< Useref />}/> 
+           <Route path="memo" element={< Usemimo/>}/> 
+
            
-            <Route path="/" element={<Loginpage />} />
+            {/* <Route path="/" element={<Loginpage />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} /> */}
            
           
 
